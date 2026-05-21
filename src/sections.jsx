@@ -167,7 +167,7 @@ function MkHeroCollage({ direction }) {
             </defs>
             <text fontSize="11" letterSpacing="2.5">
               <textPath href="#circ">
-                YAKINIKU · MASHIKO · SINCE 2018 · TOCHIGI · 
+                YAKINIKU · MASHIKO · TOCHIGI · MASHIKO ·
               </textPath>
             </text>
             <text x="60" y="56" textAnchor="middle" fontSize="14" fontWeight="700">無煙</text>
@@ -177,7 +177,7 @@ function MkHeroCollage({ direction }) {
       </div>
 
       <div className="mk-hero__text">
-        <div className="mk-hero__eyebrow">— 栃木 · 益子 / Since 2018</div>
+        <div className="mk-hero__eyebrow">— 栃木 · 益子 / Tochigi · Mashiko</div>
         <h1 className="mk-hero__title">
           <span className="mk-hero__title-ja">
             煙くないから、<br />もう一口。
@@ -492,41 +492,25 @@ function MkAccess() {
       </header>
 
       <div className="mk-access__grid">
-        <div className="mk-access__map" aria-label="地図プレースホルダ">
-          <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M40 0 L0 0 0 40" fill="none" stroke="currentColor" strokeOpacity="0.12" strokeWidth="1"/>
-              </pattern>
-            </defs>
-            <rect width="400" height="280" fill="var(--mk-paper)"/>
-            <rect width="400" height="280" fill="url(#grid)"/>
-            {/* 川 */}
-            <path d="M-10,180 Q120,140 200,170 T 420,200" fill="none"
-                  stroke="currentColor" strokeOpacity="0.18" strokeWidth="14" strokeLinecap="round"/>
-            {/* 道 */}
-            <path d="M-10,90 Q160,80 220,150 T 420,260" fill="none"
-                  stroke="currentColor" strokeOpacity="0.45" strokeWidth="3"/>
-            <path d="M60,-10 Q90,80 200,120 T 360,290" fill="none"
-                  stroke="currentColor" strokeOpacity="0.3" strokeWidth="2"/>
-            {/* お店のピン */}
-            <g transform="translate(210,135)">
-              <circle r="22" fill="var(--mk-accent)" opacity="0.18"/>
-              <circle r="10" fill="var(--mk-accent)"/>
-              <circle r="3.5" fill="var(--mk-paper)"/>
-            </g>
-            <text x="226" y="132" fontSize="12" fontWeight="700" fill="currentColor">
-              焼肉ましこ
-            </text>
-            <text x="226" y="146" fontSize="10" fill="currentColor" opacity="0.6">
-              Yakiniku Mashiko
-            </text>
-            {/* 周辺ラベル */}
-            <text x="60" y="60" fontSize="10" fill="currentColor" opacity="0.55">益子焼窯元</text>
-            <text x="290" y="240" fontSize="10" fill="currentColor" opacity="0.55">益子駅 →</text>
-            <text x="20" y="200" fontSize="10" fill="currentColor" opacity="0.55">小貝川</text>
-          </svg>
-          <div className="mk-access__mapBadge">地図 / Map (placeholder)</div>
+        <div className="mk-access__map" aria-label="Google マップ">
+          <iframe
+            title="焼肉ましこの地図"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(ACCESS.address)}&hl=ja&z=15&output=embed`}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a
+            className="mk-access__mapBadge"
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ACCESS.address)}`}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Google マップで開く →
+          </a>
         </div>
 
         <div className="mk-access__info">
@@ -618,7 +602,7 @@ function MkFooter() {
         </div>
       </div>
       <div className="mk-footer__bottom">
-        <span>© 2018–2026 焼肉ましこ</span>
+        <span>© 焼肉ましこ</span>
         <span>益子町, 栃木 / Mashiko, Tochigi</span>
       </div>
     </footer>
