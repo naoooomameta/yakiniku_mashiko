@@ -242,12 +242,12 @@ function MkStrengths() {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 01</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">ましこの、5つのこと</span>
-          <span className="mk-secHead__en">Five things about Mashiko</span>
+          <span className="mk-secHead__ja">ましこの、3つのこと</span>
+          <span className="mk-secHead__en">Three things about Mashiko</span>
         </h2>
         <p className="mk-secHead__lead">
           焼肉屋の数だけ、焼肉のかたちがあります。<br />
-          ましこが大切にしている、5つのことです。
+          ましこが大切にしている、3つのことです。
         </p>
       </header>
 
