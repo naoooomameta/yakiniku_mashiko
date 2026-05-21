@@ -329,19 +329,29 @@ function MkMenu({ menuMode }) {
               <p className="mk-menu__catNote">{c.note}</p>
             </header>
             <ul className="mk-menu__items">
-              {c.items.map((it) => (
-                <li
-                  key={it.name}
-                  className={`mk-menu__item ${it.featured ? "is-featured" : ""}`}
-                >
-                  <div className="mk-menu__itemHead">
-                    <span className="mk-menu__itemName">{it.name}</span>
-                    <span className="mk-menu__itemDots" aria-hidden="true" />
-                    <span className="mk-menu__itemPrice">¥{it.price}</span>
-                  </div>
-                  {it.note && <div className="mk-menu__itemNote">{it.note}</div>}
-                </li>
-              ))}
+              {c.items.map((it) => {
+                const isCard = it.featured && it.img;
+                return (
+                  <li
+                    key={it.name}
+                    className={`mk-menu__item ${it.featured ? "is-featured" : ""} ${isCard ? "mk-menu__item--card" : ""}`}
+                  >
+                    {isCard && (
+                      <div className="mk-menu__itemImg">
+                        <img src={it.img} alt={it.name} loading="lazy" />
+                      </div>
+                    )}
+                    <div className="mk-menu__itemBody">
+                      <div className="mk-menu__itemHead">
+                        <span className="mk-menu__itemName">{it.name}</span>
+                        <span className="mk-menu__itemDots" aria-hidden="true" />
+                        <span className="mk-menu__itemPrice">¥{it.price}</span>
+                      </div>
+                      {it.note && <div className="mk-menu__itemNote">{it.note}</div>}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </article>
         ))}
