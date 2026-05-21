@@ -123,15 +123,19 @@ html[data-bg="sumi"] body::before { mix-blend-mode: screen; opacity: 0.35; }
   font-size: 9px; letter-spacing: 0.2em; color: var(--mk-ink-soft);
   text-transform: uppercase;
 }
-.mk-nav__tel {
+/* .mk-nav__links a の display:grid を上書きするため特異度を上げる */
+.mk-nav__links a.mk-nav__tel {
   background: var(--mk-accent); color: var(--mk-paper);
   padding: 9px 16px; border-radius: 999px;
   font-size: 13px; font-weight: 600;
   display: inline-flex; align-items: center; gap: 6px;
   white-space: nowrap; flex-shrink: 0;
+  line-height: 1;
+  width: auto;
+  border-bottom: 0;
 }
-.mk-nav__tel:hover { filter: brightness(1.06); }
-.mk-nav__tel::after { display: none !important; }
+.mk-nav__links a.mk-nav__tel:hover { filter: brightness(1.06); }
+.mk-nav__links a.mk-nav__tel::after { display: none !important; }
 
 .mk-nav__burger {
   display: none; background: transparent; border: 0; padding: 8px;
@@ -151,12 +155,17 @@ html[data-bg="sumi"] body::before { mix-blend-mode: screen; opacity: 0.35; }
     padding: 24px var(--mk-gutter);
     transform: translateY(-110%); transition: transform .25s ease;
     align-items: flex-start;
+    overflow-y: auto;
   }
   .mk-nav__links.is-open { transform: translateY(0); }
   .mk-nav__links a { font-size: 18px; padding: 12px 0; width: 100%;
     border-bottom: 1px solid color-mix(in srgb, var(--mk-ink) 10%, transparent); }
   .mk-nav__links a:last-child { border-bottom: 0; }
-  .mk-nav__tel { font-size: 16px; padding: 12px 20px; margin-top: 8px; }
+  .mk-nav__links a.mk-nav__tel {
+    font-size: 15px; padding: 12px 20px;
+    margin-top: 12px; width: max-content;
+    align-self: flex-start;
+  }
 }
 
 /* ── btn ─────────────────────────────────────────────────────────────── */
@@ -836,4 +845,128 @@ html[data-bg="sumi"] .mk-footer { color: color-mix(in srgb, var(--mk-paper) 70%,
 image-slot { font-family: var(--mk-body) !important; }
 image-slot::part(frame) {
   background: color-mix(in srgb, var(--mk-ink) 8%, var(--mk-paper-alt)) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   MOBILE RESPONSIVE — 600px 以下・480px 以下のスマホ向け細かい調整
+*/
+
+@media (max-width: 880px) {
+  .mk-hero--collage { gap: 32px; padding-top: clamp(96px, 18vw, 120px); }
+  .mk-hero__collage { aspect-ratio: 4 / 3; }
+  .mk-coll--stamp {
+    width: clamp(64px, 18vw, 96px); height: clamp(64px, 18vw, 96px);
+    left: auto; right: -6px; bottom: -10px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root { --mk-gutter: 18px; }
+
+  .mk-section { padding: clamp(48px, 12vw, 72px) var(--mk-gutter); }
+  .mk-secHead { margin-bottom: 28px; }
+  .mk-secHead__title { font-size: clamp(24px, 7.5vw, 32px); }
+  .mk-secHead__lead { font-size: 14px; line-height: 1.85; }
+
+  /* hero */
+  .mk-hero { padding-top: 64px; min-height: auto; }
+  .mk-hero--fullbleed { min-height: 92vh; }
+  .mk-hero--fullbleed .mk-hero__card { padding-bottom: 56px; }
+  .mk-hero__title { font-size: clamp(34px, 11vw, 48px) !important; line-height: 1.15; }
+  .mk-hero__title-en { font-size: 0.26em; letter-spacing: 0.24em; }
+  .mk-hero__lead { font-size: 15px; line-height: 1.85; }
+  .mk-hero__meta { font-size: 12px; gap: 6px; }
+  .mk-hero__cta { gap: 8px; }
+  .mk-hero__cta .mk-btn { padding: 12px 16px; font-size: 13px; }
+  .mk-hero--video { padding-top: clamp(76px, 16vw, 100px); }
+  .mk-hero__videoFrame { aspect-ratio: 4 / 3; }
+  .mk-hero__playBadge { padding: 10px 16px 10px 14px; font-size: 11px; }
+
+  /* strengths — 縦に積む */
+  .mk-strength {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    padding: 20px;
+  }
+  .mk-strength__no {
+    font-size: 36px;
+    margin-bottom: -4px;
+  }
+  .mk-strength__title { font-size: 18px; }
+  .mk-strength__text { font-size: 14px; line-height: 1.85; }
+  .mk-strength__img {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  /* menu */
+  .mk-menu__tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .mk-menu__tabs::-webkit-scrollbar { display: none; }
+  .mk-menu__tab { padding: 8px 12px; flex-shrink: 0; }
+  .mk-menu__tabJa { font-size: 13px; }
+  .mk-menu__catJa { font-size: 22px; }
+  .mk-menu__itemHead {
+    flex-wrap: wrap;
+    font-size: 15px;
+    gap: 8px;
+  }
+  .mk-menu__itemName { flex: 1 1 60%; }
+  .mk-menu__itemDots { display: none; }
+  .mk-menu__itemPrice { margin-left: auto; }
+
+  /* facility */
+  .mk-facility__grid { gap: 6px; }
+  .mk-facility__spec { padding: 14px 16px; }
+  .mk-facility__spec dd { font-size: 14px; line-height: 1.7; }
+  .mk-facility__cap { font-size: 10px; padding: 3px 8px; }
+
+  /* voices */
+  .mk-voices__list { grid-template-columns: 1fr; gap: 14px; }
+  .mk-voice { padding: 22px 20px; }
+  .mk-voice__text { font-size: 15px; }
+
+  /* instagram */
+  .mk-ig__grid { gap: 4px; margin-bottom: 24px; }
+  .mk-ig__follow { width: 100%; justify-content: center; }
+
+  /* access map: モバイルでは縦長になりすぎないように比率固定 */
+  .mk-access__map { aspect-ratio: 4 / 3; min-height: 260px; }
+  .mk-access__info-list { gap: 14px; }
+  .mk-access__info-list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding-bottom: 14px;
+  }
+  .mk-access__info-list dd { font-size: 14px; }
+  .mk-access__day { width: auto; margin-right: 8px; }
+  .mk-access__cta .mk-btn { width: 100%; justify-content: center; }
+
+  /* footer */
+  .mk-footer { padding: 56px var(--mk-gutter) 28px; }
+  .mk-footer__top { gap: 28px; padding-bottom: 28px; }
+  .mk-footer__cols { grid-template-columns: 1fr; gap: 20px; }
+  .mk-footer__bottom { flex-direction: column; gap: 6px; padding-top: 18px; }
+  .mk-footer__brand-ja { font-size: 24px; }
+}
+
+@media (max-width: 380px) {
+  .mk-hero__title { font-size: clamp(28px, 10vw, 38px) !important; }
+  .mk-hero__cta { flex-direction: column; align-items: stretch; }
+  .mk-hero__cta .mk-btn { justify-content: center; }
+  .mk-strength { padding: 16px; }
+  .mk-strength__no { font-size: 32px; }
+}
+
+/* タップ領域 / hoverを持たないデバイス向け */
+@media (hover: none) {
+  .mk-ig__heart { opacity: 1; }
+  .mk-btn--primary:hover { transform: none; }
 }
