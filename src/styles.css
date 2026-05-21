@@ -515,6 +515,65 @@ html[data-direction="postcard"] .mk-strength:nth-child(even) { transform: rotate
   vertical-align: 2px;
 }
 
+/* 看板メニュー（featured + img）は画像カードで表示 */
+.mk-menu__item--card {
+  border-bottom: 0;
+  padding: 0;
+  margin: 8px 0 18px;
+  background: var(--mk-paper);
+  border-radius: var(--mk-r-md);
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--mk-ink) 8%, transparent),
+    0 12px 28px -18px color-mix(in srgb, var(--mk-ink) 35%, transparent);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.mk-menu__item--card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--mk-ink) 10%, transparent),
+    0 18px 36px -16px color-mix(in srgb, var(--mk-ink) 40%, transparent);
+}
+.mk-menu__item--card .mk-menu__itemImg {
+  position: relative;
+  overflow: hidden;
+  background: var(--mk-paper-alt);
+}
+.mk-menu__item--card .mk-menu__itemImg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mk-menu__item--card .mk-menu__itemBody {
+  padding: 18px 22px;
+  display: grid; gap: 6px;
+  align-content: center;
+}
+.mk-menu__item--card .mk-menu__itemHead { font-size: 18px; }
+.mk-menu__item--card .mk-menu__itemName { font-weight: 700; }
+.mk-menu__item--card .mk-menu__itemNote {
+  font-size: 13px; line-height: 1.7;
+}
+html[data-direction="postcard"] .mk-menu__item--card:nth-child(odd) { transform: rotate(-0.25deg); }
+html[data-direction="postcard"] .mk-menu__item--card:nth-child(even) { transform: rotate(0.25deg); }
+
+@media (max-width: 600px) {
+  .mk-menu__item--card {
+    grid-template-columns: 1fr;
+  }
+  .mk-menu__item--card .mk-menu__itemImg {
+    aspect-ratio: 16 / 10;
+  }
+  .mk-menu__item--card .mk-menu__itemBody {
+    padding: 14px 16px 16px;
+  }
+  .mk-menu__item--card .mk-menu__itemHead { font-size: 16px; }
+}
+
 .mk-menu__foot {
   margin-top: clamp(36px, 5vw, 48px);
   padding: 18px 22px;
