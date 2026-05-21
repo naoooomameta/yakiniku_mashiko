@@ -486,7 +486,7 @@ function MkAccess() {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 05</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">いらしてください</span>
+          <span className="mk-secHead__ja">店舗のご案内</span>
           <span className="mk-secHead__en">Access</span>
         </h2>
       </header>
