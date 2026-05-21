@@ -680,10 +680,16 @@ html[data-direction="postcard"] .mk-strength:nth-child(even) { transform: rotate
 .mk-access__mapBadge {
   position: absolute; right: 12px; top: 12px;
   font-size: 10.5px; letter-spacing: 0.18em;
-  background: var(--mk-paper); padding: 5px 10px;
+  background: var(--mk-paper); padding: 6px 12px;
   border-radius: 99px;
   color: var(--mk-ink-soft);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: color .15s, transform .15s;
+  font-weight: 600;
+  z-index: 2;
 }
+.mk-access__mapBadge:hover { color: var(--mk-accent); transform: translateY(-1px); }
 .mk-access__info-list {
   display: grid; gap: 18px;
   margin-bottom: 28px;
