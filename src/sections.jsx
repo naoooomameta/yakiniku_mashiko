@@ -297,7 +297,7 @@ function MkMenu({ menuMode }) {
         </h2>
         <p className="mk-secHead__lead">
           季節と仕入れに合わせて、内容は日々変わります。<br />
-          表示価格は税込です。
+          価格は全て税・サ込です。
         </p>
       </header>
 
