@@ -180,7 +180,7 @@ function MkHeroCollage({ direction }) {
         <div className="mk-hero__eyebrow">— 栃木 · 益子 / Tochigi · Mashiko</div>
         <h1 className="mk-hero__title">
           <span className="mk-hero__title-ja">
-            気がねなく、<br />家族の焼肉。
+            ふらりと、<br />焼肉時間。
           </span>
         </h1>
         <p className="mk-hero__lead">{SITE.description}</p>
