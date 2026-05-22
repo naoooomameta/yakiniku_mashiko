@@ -83,7 +83,7 @@ const MENU = {
       items: [
         { name: "栃木和牛サーロイン（200g）", price: "6,000", featured: true },
         { name: "和牛上カルビ", price: "2,000" },
-        { name: "栃木和牛ましこカルビ", price: "1,200", note: "おすすめ", featured: true },
+        { name: "栃木和牛ましこカルビ", price: "1,200", note: "おすすめ", featured: true, img: "assets/menu-mashikokarubi.jpg" },
         { name: "牛タン", price: "1,300", featured: true, img: "assets/menu-gyutan.jpg" },
         { name: "牛ハラミ", price: "880" },
         { name: "牛ザブトン", price: "880" },
@@ -94,7 +94,7 @@ const MENU = {
         { name: "トントロ", price: "400" },
         { name: "鶏もも", price: "300" },
         { name: "ウィンナー", price: "350", featured: true, img: "assets/menu-winner.jpg" },
-        { name: "牛すじ煮込み", price: "400" },
+        { name: "牛すじ煮込み", price: "400", featured: true, img: "assets/menu-gyusuji.jpg" },
         { name: "豚もつ煮込み", price: "400" },
       ],
     },
