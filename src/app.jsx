@@ -3,9 +3,9 @@
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "direction": "forest",
   "heading": "auto",
-  "accent": "auto",
+  "accent": "mashiko",
   "hero": "collage",
-  "bg": "auto",
+  "bg": "paper",
   "menuMode": "tabs"
 }/*EDITMODE-END*/;
 
