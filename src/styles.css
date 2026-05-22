@@ -666,7 +666,13 @@ html[data-direction="postcard"] .mk-menu__item--card:nth-child(even) { transform
 .mk-voices__label {
   font-size: 12px; letter-spacing: 0.25em;
   color: var(--mk-accent); font-weight: 600;
+  margin-bottom: 14px;
+}
+.mk-voices__intro {
+  color: var(--mk-ink-soft);
+  font-size: 14px; line-height: 1.9;
   margin-bottom: 28px;
+  max-width: 560px;
 }
 .mk-voices__list {
   display: grid; gap: clamp(20px, 3vw, 32px);
@@ -678,12 +684,45 @@ html[data-direction="postcard"] .mk-menu__item--card:nth-child(even) { transform
   border-radius: var(--mk-r-md);
   position: relative;
 }
+.mk-voice__order {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--mk-ink) 18%, transparent);
+}
+.mk-voice__cat {
+  grid-column: 1 / 2;
+  font-size: 10.5px; letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mk-accent); font-weight: 600;
+  margin-bottom: 4px;
+}
+.mk-voice__dish {
+  grid-column: 1 / 2;
+  font-family: var(--mk-heading);
+  font-size: 17px; font-weight: 600;
+  color: var(--mk-ink);
+  line-height: 1.4;
+}
+.mk-voice__price {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  align-self: end;
+  font-family: var(--mk-heading);
+  font-size: 15px; font-weight: 600;
+  color: var(--mk-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
 .mk-voice__quote {
-  position: absolute; top: 4px; left: 18px;
+  position: absolute; top: 4px; right: 18px; left: auto;
   font-family: var(--mk-serif);
   font-size: 80px; line-height: 1;
   color: var(--mk-accent);
-  opacity: 0.22;
+  opacity: 0.18;
 }
 .mk-voice__text {
   font-family: var(--mk-heading);
