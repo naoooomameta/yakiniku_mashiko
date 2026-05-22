@@ -242,12 +242,12 @@ function MkStrengths() {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 01</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">ましこの、3つのこと</span>
-          <span className="mk-secHead__en">Three things about Mashiko</span>
+          <span className="mk-secHead__ja">ましこが、選ばれる理由</span>
+          <span className="mk-secHead__en">Why Mashiko</span>
         </h2>
         <p className="mk-secHead__lead">
-          焼肉屋の数だけ、焼肉のかたちがあります。<br />
-          ましこが大切にしている、3つのことです。
+          煙の出ない焼き台、手の届く価格、家族で過ごせる一日。<br />
+          焼肉ましこが大切にしている、3つの軸です。
         </p>
       </header>
 
@@ -292,7 +292,7 @@ function MkMenu({ menuMode }) {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 02</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">本日のお品書き</span>
+          <span className="mk-secHead__ja">お品書き</span>
           <span className="mk-secHead__en">Menu</span>
         </h2>
         <p className="mk-secHead__lead">
@@ -374,7 +374,7 @@ function MkFacility() {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 03</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">店内のこと</span>
+          <span className="mk-secHead__ja">店内の様子</span>
           <span className="mk-secHead__en">Facility</span>
         </h2>
         <p className="mk-secHead__lead">
@@ -403,7 +403,7 @@ function MkFacility() {
         <div className="mk-facility__sub mk-facility__sub--2">
           <image-slot id="fac-2" shape="rounded" radius="6" src={slotSrc("fac-2")}
             placeholder="個室・カウンター" style={{ width: "100%", height: "100%" }}></image-slot>
-          <span className="mk-facility__cap">個室 / Private</span>
+          <span className="mk-facility__cap">アスレチック / Athletic</span>
         </div>
         <div className="mk-facility__sub mk-facility__sub--3">
           <image-slot id="fac-3" shape="rounded" radius="6" src={slotSrc("fac-3")}
