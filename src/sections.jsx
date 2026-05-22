@@ -138,7 +138,6 @@ function MkHeroCollage({ direction }) {
             placeholder="メイン写真（焼肉の網）"
             style={{ width: "100%", height: "100%" }}
           ></image-slot>
-          <span className="mk-coll__cap">no.01 / お肉</span>
         </div>
         <div className="mk-coll mk-coll--b">
           <image-slot
@@ -148,7 +147,6 @@ function MkHeroCollage({ direction }) {
             placeholder="店内・家族写真"
             style={{ width: "100%", height: "100%" }}
           ></image-slot>
-          <span className="mk-coll__cap">no.02 / 店内</span>
         </div>
         <div className="mk-coll mk-coll--c">
           <image-slot
@@ -158,7 +156,6 @@ function MkHeroCollage({ direction }) {
             placeholder="益子の風景"
             style={{ width: "100%", height: "100%" }}
           ></image-slot>
-          <span className="mk-coll__cap">no.03 / 益子</span>
         </div>
         <div className="mk-coll mk-coll--stamp" aria-hidden="true">
           <svg viewBox="0 0 120 120">
@@ -398,7 +395,7 @@ function MkFacility() {
         <div className="mk-facility__sub mk-facility__sub--1">
           <image-slot id="fac-1" shape="rounded" radius="6" src={slotSrc("fac-1")}
             placeholder="テーブル席" style={{ width: "100%", height: "100%" }}></image-slot>
-          <span className="mk-facility__cap">テーブル / Table</span>
+          <span className="mk-facility__cap">バーベキューハウス / BBQ House</span>
         </div>
         <div className="mk-facility__sub mk-facility__sub--2">
           <image-slot id="fac-2" shape="rounded" radius="6" src={slotSrc("fac-2")}
