@@ -68,7 +68,7 @@ const MENU = {
         { name: "おすすめランチ（土日）", price: "1,100", note: "焼肉盛合せ・ライス・スープ付き" },
         { name: "黒毛和牛ハンバーグランチ", price: "1,300", note: "とちぎ和牛・前日光和牛・とちぎ夢ポーク使用／和風オニオンソース／サラダ・小鉢・ご飯・スープ付き", featured: true, img: "assets/menu-hamburger.jpg" },
         { name: "レディースランチ", price: "1,400", note: "牛ハラミ・牛カルビ・豚カルビ・鶏もも／サラダ・小鉢・ご飯・スープ・日替りミニデザート付き", featured: true, img: "assets/menu-ladies.jpg" },
-        { name: "牛尽くしランチ", price: "1,600", note: "ザブトン・牛ハラミ・牛カルビ／小鉢・ご飯・スープ付き", featured: true, img: "assets/strength-1-roaster.jpg" },
+        { name: "牛尽くしランチ", price: "1,600", note: "ザブトン・牛ハラミ・牛カルビ／小鉢・ご飯・スープ付き", featured: true, img: "assets/menu-gyutsukushi.jpg" },
         { name: "ランチドリンクバー", price: "+200", note: "ランチご注文の方限定", featured: true, img: "assets/menu-drinkbar.jpg" },
         { name: "ライス大盛", price: "+100" },
         { name: "サラダ追加", price: "200" },
