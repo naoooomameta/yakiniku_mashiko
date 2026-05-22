@@ -390,7 +390,7 @@ function MkFacility() {
             placeholder="店内メイン（座敷席）"
             style={{ width: "100%", height: "100%" }}
           ></image-slot>
-          <span className="mk-facility__cap">座敷 / Tatami room</span>
+          <span className="mk-facility__cap">お席 / Seats</span>
         </div>
         <div className="mk-facility__sub mk-facility__sub--1">
           <image-slot id="fac-1" shape="rounded" radius="6" src={slotSrc("fac-1")}
