@@ -71,8 +71,8 @@ const MENU = {
         { name: "牛尽くしランチ", price: "1,600", note: "ザブトン・牛ハラミ・牛カルビ／小鉢・ご飯・スープ付き", featured: true, img: "assets/menu-gyutsukushi.jpg" },
         { name: "ランチドリンクバー", price: "+200", note: "ランチご注文の方限定", featured: true, img: "assets/menu-drinkbar.jpg" },
         { name: "ライス大盛", price: "+100" },
-        { name: "サラダ追加", price: "200" },
-        { name: "ミニデザート", price: "200" },
+        { name: "サラダ追加", price: "200", featured: true, img: "assets/menu-salada.jpg" },
+        { name: "ミニデザート", price: "200", featured: true, img: "assets/menu-dessert.jpg" },
       ],
     },
     {
