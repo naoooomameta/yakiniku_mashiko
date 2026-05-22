@@ -335,7 +335,7 @@ function MkMenu({ menuMode }) {
                   >
                     {isCard && (
                       <div className="mk-menu__itemImg">
-                        <img src={it.img} alt={it.name} loading="lazy" />
+                        <img src={it.img} alt={it.name} loading="lazy" decoding="async" />
                       </div>
                     )}
                     <div className="mk-menu__itemBody">
