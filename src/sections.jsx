@@ -242,8 +242,8 @@ function MkStrengths() {
       <header className="mk-secHead">
         <div className="mk-secHead__no">— 01</div>
         <h2 className="mk-secHead__title">
-          <span className="mk-secHead__ja">ましこが、選ばれる理由</span>
-          <span className="mk-secHead__en">Why Mashiko</span>
+          <span className="mk-secHead__ja">焼肉ましこの、3つの約束。</span>
+          <span className="mk-secHead__en">Three Promises from Mashiko</span>
         </h2>
         <p className="mk-secHead__lead">
           煙の出ない焼き台、手の届く価格、家族で過ごせる一日。<br />
