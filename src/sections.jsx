@@ -180,7 +180,7 @@ function MkHeroCollage({ direction }) {
         <div className="mk-hero__eyebrow">— 栃木 · 益子 / Tochigi · Mashiko</div>
         <h1 className="mk-hero__title">
           <span className="mk-hero__title-ja">
-            煙くないから、<br />もう一口。
+            気がねなく、<br />家族の焼肉。
           </span>
         </h1>
         <p className="mk-hero__lead">{SITE.description}</p>
@@ -431,10 +431,18 @@ function MkVoices() {
   return (
     <section className="mk-section mk-voices" aria-label="お客様の声">
       <div className="mk-voices__inner">
-        <div className="mk-voices__label">— Voices / お客さまの声</div>
+        <div className="mk-voices__label">— Voices / お品書きから、お客さまの声</div>
+        <p className="mk-voices__intro">
+          いただいた一皿について、お客さまから届いたひとこと。
+        </p>
         <ul className="mk-voices__list">
           {VOICE.map((v, i) => (
             <li key={i} className="mk-voice">
+              <div className="mk-voice__order">
+                <span className="mk-voice__cat">{v.category}</span>
+                <span className="mk-voice__dish">{v.menu}</span>
+                <span className="mk-voice__price">¥{v.price}</span>
+              </div>
               <span className="mk-voice__quote" aria-hidden="true">"</span>
               <p className="mk-voice__text">{v.quote}</p>
               <div className="mk-voice__by">— {v.by}</div>
