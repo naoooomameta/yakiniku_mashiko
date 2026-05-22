@@ -403,7 +403,7 @@ function MkFacility() {
         <div className="mk-facility__sub mk-facility__sub--2">
           <image-slot id="fac-2" shape="rounded" radius="6" src={slotSrc("fac-2")}
             placeholder="個室・カウンター" style={{ width: "100%", height: "100%" }}></image-slot>
-          <span className="mk-facility__cap">個室 / Private</span>
+          <span className="mk-facility__cap">アスレチック / Athletic</span>
         </div>
         <div className="mk-facility__sub mk-facility__sub--3">
           <image-slot id="fac-3" shape="rounded" radius="6" src={slotSrc("fac-3")}

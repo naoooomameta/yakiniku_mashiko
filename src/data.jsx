@@ -18,7 +18,7 @@ const SITE = {
 };
 
 const NAV = [
-  { id: "strengths", ja: "ましこの強み", en: "Strengths" },
+  { id: "strengths", ja: "当店について", en: "About" },
   { id: "menu", ja: "メニュー", en: "Menu" },
   { id: "facility", ja: "店内", en: "Facility" },
   { id: "instagram", ja: "Instagram", en: "Gallery" },
