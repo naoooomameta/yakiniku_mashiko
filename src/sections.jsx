@@ -16,7 +16,6 @@ const SLOT_SRC = {
   "strength-03": "assets/strength-3-family.jpg?v=2",
   "strength-04": "assets/menu-dinner.jpg",
   "strength-05": "assets/facility-dessert.jpg",
-  "fac-main": "assets/hero-interior.jpg",
   "fac-1":    "assets/facility-bbq.jpg",
   "fac-2":    "assets/facility-athletic.jpg",
   "fac-3":    "assets/facility-seasons.jpg",
