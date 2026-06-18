@@ -235,14 +235,14 @@
       root.innerHTML =
         '<style>' + stylesheet + '</style>' +
         '<div class="frame" part="frame">' +
-        '  <img part="image" alt="" draggable="false" style="display:none">' +
+        '  <img part="image" alt="" draggable="false" decoding="async" style="display:none">' +
         '  <div class="empty" part="empty">' + icon +
         '    <div class="cap"></div>' +
         '    <div class="sub">or <u>browse files</u></div></div>' +
         '  <div class="ring" part="ring"></div>' +
         '</div>' +
         '<div class="spill">' +
-        '  <img class="ghost" alt="" draggable="false">' +
+        '  <img class="ghost" alt="" draggable="false" decoding="async">' +
         '  <div class="handle" data-c="nw"></div><div class="handle" data-c="ne"></div>' +
         '  <div class="handle" data-c="sw"></div><div class="handle" data-c="se"></div>' +
         '</div>' +
@@ -617,6 +617,12 @@
       // the display:flex / display:block rules in the stylesheet above.
       if (url) {
         if (this._img.getAttribute('src') !== url) {
+          // 画面外の画像はネイティブ遅延読み込み。ヒーロー等 above-the-fold は
+          // eager 属性で即時読み込みして LCP を確保する。loading は src 設定前に決める。
+          const loading = this.hasAttribute('eager') ? 'eager' : 'lazy';
+          this._img.loading = loading;
+          this._ghost.loading = loading;
+          if (this.hasAttribute('eager')) this._img.setAttribute('fetchpriority', 'high');
           this._img.src = url;
           this._ghost.src = url;
         }

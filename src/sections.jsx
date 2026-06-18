@@ -89,6 +89,7 @@ function MkHeroFullBleed({ direction }) {
       <div className="mk-hero__bg">
         <image-slot
           id="hero-bg"
+          eager=""
           shape="rect"
           src={slotSrc("hero-bg")}
           placeholder="ヒーロー背景（森・店外観など 横長）"
@@ -133,6 +134,7 @@ function MkHeroCollage({ direction }) {
         <div className="mk-coll mk-coll--a">
           <image-slot
             id="hero-a"
+            eager=""
             shape="rect"
             src={slotSrc("hero-a")}
             placeholder="メイン写真（焼肉の網）"
@@ -142,6 +144,7 @@ function MkHeroCollage({ direction }) {
         <div className="mk-coll mk-coll--b">
           <image-slot
             id="hero-b"
+            eager=""
             shape="rect"
             src={slotSrc("hero-b")}
             placeholder="店内・家族写真"
@@ -151,6 +154,7 @@ function MkHeroCollage({ direction }) {
         <div className="mk-coll mk-coll--c">
           <image-slot
             id="hero-c"
+            eager=""
             shape="rect"
             src={slotSrc("hero-c")}
             placeholder="益子の風景"
@@ -198,6 +202,7 @@ function MkHeroVideo({ direction }) {
       <div className="mk-hero__videoFrame">
         <image-slot
           id="hero-video"
+          eager=""
           shape="rect"
           src={slotSrc("hero-video")}
           placeholder="動画風プレースホルダ（焼いている網のシズル）"

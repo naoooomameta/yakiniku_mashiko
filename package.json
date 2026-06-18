@@ -1,0 +1,16 @@
+{
+  "name": "yakiniku-mashiko",
+  "version": "1.0.0",
+  "private": true,
+  "description": "焼肉ましこ 公式サイト（静的サイト）",
+  "scripts": {
+    "build": "esbuild src/tweaks-panel.jsx src/data.jsx src/sections.jsx src/app.jsx --outdir=src --out-extension:.js=.js --jsx=transform --minify-whitespace --target=es2018 --log-level=warning",
+    "vendor": "cp node_modules/react/umd/react.production.min.js assets/vendor/react-18.3.1.production.min.js && cp node_modules/react-dom/umd/react-dom.production.min.js assets/vendor/react-dom-18.3.1.production.min.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.35.1"
+  }
+}
