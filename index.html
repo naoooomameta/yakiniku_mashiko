@@ -12,19 +12,21 @@
 
   <link rel="stylesheet" href="src/styles.css" />
 
-  <!-- React + Babel -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <!-- ヒーロー画像を先読みして LCP を改善 -->
+  <link rel="preload" as="image" href="assets/hero-roaster.jpg" fetchpriority="high" />
 
-  <script src="src/image-slot.js"></script>
+  <!-- React（自前ホスト）＋アプリ本体。すべて defer で非ブロッキング読み込み＆実行順を保証。
+       表示用の src/*.js は src/*.jsx を `npm run build`（esbuild）で事前変換したもの。
+       ブラウザ内 Babel 変換を廃止し、初回表示を高速化している。 -->
+  <script defer src="assets/vendor/react-18.3.1.production.min.js"></script>
+  <script defer src="assets/vendor/react-dom-18.3.1.production.min.js"></script>
+  <script defer src="src/image-slot.js"></script>
+  <script defer src="src/tweaks-panel.js"></script>
+  <script defer src="src/data.js"></script>
+  <script defer src="src/sections.js"></script>
+  <script defer src="src/app.js"></script>
 </head>
 <body>
   <div id="mk-root"></div>
-
-  <script type="text/babel" src="src/tweaks-panel.jsx"></script>
-  <script type="text/babel" src="src/data.jsx"></script>
-  <script type="text/babel" src="src/sections.jsx"></script>
-  <script type="text/babel" src="src/app.jsx"></script>
 </body>
 </html>
