@@ -26,7 +26,7 @@ const SLOT_SRC = {
   "ig-4": "assets/menu-lunch.jpg",
   "ig-5": "assets/strength-3-family.jpg?v=2",
   "ig-6": "assets/facility-bbq.jpg",
-  "ig-7": "assets/menu-kids.jpg",
+  "ig-7": "assets/menu-gyutan.jpg",
   "ig-8": "assets/strength-2-nature.jpg",
   "ig-9": "assets/facility-dessert.jpg",
 };
